@@ -1,0 +1,16 @@
+{
+  "description": "Remind Claude to route qualifying substantial work.",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"Treat substantial multi-step analysis, inspection, audits, scans, research, and planning as qualifying work even when the user requested findings only and did not authorize implementation. First complete that requested deliverable and present its useful content before routing advice. If its findings identify actionable changes, validation, or follow-on research, those actions are a concrete substantial next phase. A cross-file release-flow, cross-platform consistency, or test-gap scan qualifies; do not classify it as a merely informational query. When such a next phase exists, or the user requested execution, you MUST invoke /adaptive-task-routing:adaptive-task-routing after the plan and before that phase begins, then follow its routing gate. In user-facing output, put the requested plan or findings before the routing note. Begin that note with a Markdown divider and localized Adaptive Task Routing resource-guidance heading. In ask mode stop after the note and wait for the user's natural response; only auto mode may continue automatically. Skip ordinary chat, status checks, tiny operations, questions only about this plugin, and an unchanged phase whose gate already completed.\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}
