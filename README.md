@@ -8,6 +8,17 @@ reminder before each prompt so Claude first presents the requested analysis or p
 the coordinator before any qualifying next phase. For an execution request, Claude presents an
 actionable plan before the gate.
 
+## Change modes in conversation
+
+You can inspect or change routing modes without editing plugin files:
+
+- “Set Adaptive Task Routing to auto for this conversation.”
+- “Set model routing to ask.”
+- “Turn context routing off for this task.”
+- “What routing modes are active?”
+
+An unqualified mode change applies to both independent routers. See the [complete response example](docs/usage/README.md#what-you-will-see) or choose another language above.
+
 ## Install
 
 The Claude Code directory submission is under review. Until it is listed, clone the
