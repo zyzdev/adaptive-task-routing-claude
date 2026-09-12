@@ -1,19 +1,22 @@
 # Adaptive Task Routing — Claude Code
 
+[English](docs/usage/README.md) · [繁體中文](docs/usage/README.zh-TW.md) · [简体中文](docs/usage/README.zh-CN.md) · [日本語](docs/usage/README.ja.md) · [한국어](docs/usage/README.ko.md)
+
 Three Skills route substantial work through context, model and reasoning recommendations.
 Both independent routers default to ask. A packaged `UserPromptSubmit` hook injects a short
 reminder before each prompt so Claude first presents the requested analysis or plan, then invokes
 the coordinator before any qualifying next phase. For an execution request, Claude presents an
 actionable plan before the gate.
 
-## Local installation
+## Install
 
-Extract this ZIP into an adaptive-task-routing directory. Its root contains
-.claude-plugin/plugin.json, skills/ and shared/. Run:
+The Claude Code directory submission is under review. Until it is listed, clone the
+public release repository and start Claude Code with the plugin directory:
 
 ```bash
-claude plugin validate /absolute/path/to/adaptive-task-routing --strict
-claude --plugin-dir /absolute/path/to/adaptive-task-routing
+git clone --branch v0.4.2 https://github.com/zyzdev/adaptive-task-routing-claude.git
+claude plugin validate "$PWD/adaptive-task-routing-claude" --strict
+claude --plugin-dir "$PWD/adaptive-task-routing-claude"
 ```
 
 In the new session, first submit a substantial plan-only task without naming the Skill and confirm
